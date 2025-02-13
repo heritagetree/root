@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.cfather, .cmother, .cchild {
+  border: 2px solid gray;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.cjoint {
+  text-align: center;
+  color: gray;
+}
+.ctitle {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  color: gray;
+}
+.ccvp {
+  border: none;
+  text-align: center;
+  color: black;
+}
+.ccvt {
+  border: none;
+  text-align: left;
+  color: black;
+}
+.cindex-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.cindex-item {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+}
+.cindex_header {
+  text-align: center;
+  font-size: 2em;
+}
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+footer p {
+  margin: 5px 0;
+}
+.disclaimer {
+  font-size: 0.7em;
+  color: #555;
+}
+.cindex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.cindex-left-item {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+}
+.cindex-center-item {
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  /* For devices with a screen width <= 768px (tablets, small screens) */
+  
+  .ctitle {
+    width: 90%; /* Make the title take more space on smaller screens */
+  }
+
+  .cindex-list {
+    grid-template-columns: 1fr; /* Stack items on top of each other for smaller screens */
+    padding: 10px;
+  }
+
+  .cindex-item {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .cfather, .cmother, .cchild {
+    width: 100%; /* Full width for these items on mobile */
+  }
+
+  .cindex-left-item, .cindex-center-item {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices (phones with smaller screens) */
+  
+  .ctitle {
+    width: 100%; /* Full width for title on phones */
+  }
+
+  footer {
+    padding: 5px;
+  }
+  
+  .cindex-item {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .cindex-header {
+    font-size: 1.5em;
+  }
+
+  .cfather, .cmother, .cchild {
+    padding: 5px;
+    margin: 5px;
+  }
+}
